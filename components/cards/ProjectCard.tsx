@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa6";
+import { useState } from "react";
 
 import Link from "next/link";
 
@@ -18,11 +19,21 @@ const ProjectCard = ({
   link,
   skills,
 }: ProjectCardProps) => {
+  const [flipped, setFlipped] = useState(false);
+
   return (
     // 1. Wrapper — sets the 3D perspective
-    <div key={name} className="group h-105 perspective-[1000px]">
+    <div
+      onClick={() => setFlipped((prev) => !prev)}
+      key={name}
+      className="group h-105 perspective-[1000px]"
+    >
       {/* // 2. Flipper — this is what rotates */}
-      <div className="relative w-full h-full transition-transform duration-700 transform-3d group-hover:transform-[rotateY(180deg)]">
+      <div
+        className={`relative w-full h-full transition-transform duration-700 transform-3d group-hover:transform-[rotateY(180deg)] ${
+          flipped ? "rotate-y-180 lg:rotate-y-0" : ""
+        }`}
+      >
         {/* FRONT FACE */}
         <div className="absolute inset-0 backface-hidden flex flex-col overflow-hidden rounded-lg bg-[#19201b] border border-gray-800">
           <div className="w-full h-60 relative rounded-t-lg overflow-hidden">

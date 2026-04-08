@@ -1,7 +1,8 @@
 "use client";
 
+import gsap from "gsap";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { HEADER_ITEMS } from "../static/data";
 import { RxHamburgerMenu } from "react-icons/rx";
 
@@ -11,6 +12,27 @@ const Header = () => {
   const toggleMenu = () => {
     setOpen((prev) => !prev);
   };
+
+  const ListRef = useRef<HTMLUListElement | null>(null);
+
+  useEffect(() => {
+    // Only animate when menu opens and the ul is in the DOM
+    if (open && ListRef.current) {
+      const items = ListRef.current.querySelectorAll("li");
+
+      gsap.fromTo(
+        items,
+        { opacity: 0, x: -24 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 0.3,
+          stagger: 0.07, // each item animates in one after another
+          ease: "power2.out",
+        },
+      );
+    }
+  }, [open]); // re-runs every time open changes
 
   return (
     <div className="w-full relative flex items-center justify-start md:justify-center py-2 fixed-top bg-[#151d17] rounded-xl border-1-solid border border-[#2d352f] h-11.75">
@@ -32,9 +54,12 @@ const Header = () => {
       {open && (
         <div
           onClick={toggleMenu}
-          className="absolute top-full left-0 w-full flex items-start justify-start h-screen bg-black/50 backdrop-blur-xs"
+          className="absolute top-full left-0 w-full flex items-start justify-start h-screen bg-black/50 backdrop-blur-xs z-999"
         >
-          <ul className="md:hidden mt-2 w-full bg-[#151d17] border border-[#2d352f] rounded-xl flex flex-col items-start p-2 gap-2">
+          <ul
+            ref={ListRef}
+            className="md:hidden mt-2 w-full bg-[#151d17] border border-[#2d352f] rounded-xl flex flex-col items-start p-2 gap-2"
+          >
             {HEADER_ITEMS.map((item) => (
               <li key={item.title} className="w-full">
                 <Link

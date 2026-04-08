@@ -169,7 +169,7 @@ export const PROJECTS = [
 
 export const EXPERIENCES = [
   {
-    image: "/images/signals_control.jfif",
+    image: "/images/signals_control.png",
     position: "Frontend Developer",
     type: "Freelance",
     location: "Amman, Jordan",
@@ -185,7 +185,7 @@ export const EXPERIENCES = [
     endDate: " Jun 2025",
   },
   {
-    image: "/images/future-advanced.jfif",
+    image: "/images/future-advanced.png",
     position: "Frontend Developer",
     type: "Internship",
     location: "Amman, Jordan",
