@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { ToastContainer } from "react-toastify";
 import "./globals.css";
 
@@ -38,6 +39,7 @@ export default function RootLayout({
           draggable
           theme="dark" // عشان يتناسب مع الـ dark theme تبعك
         />
+        <GoogleAnalytics gaId="G-K29H6R9X4D" />
       </body>
     </html>
   );
