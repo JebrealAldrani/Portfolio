@@ -35,7 +35,7 @@ const Header = () => {
   }, [open]); // re-runs every time open changes
 
   return (
-    <div className="w-full relative flex items-center justify-start md:justify-center py-2 fixed-top bg-[#151d17] rounded-xl border-1-solid border border-[#2d352f] h-11.75">
+    <nav className="w-full relative flex items-center justify-start md:justify-center py-2 fixed-top bg-[#151d17] rounded-xl border-1-solid border border-[#2d352f] h-11.75">
       <ul className="hidden md:flex md:items-center md:gap-5">
         {HEADER_ITEMS.map((item) => (
           <li key={item.title}>
@@ -82,7 +82,7 @@ const Header = () => {
         className="md:hidden text-white ml-4 cursor-pointer w-6 h-6"
         onClick={toggleMenu}
       />
-    </div>
+    </nav>
   );
 };
 

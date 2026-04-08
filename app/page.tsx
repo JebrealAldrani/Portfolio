@@ -13,13 +13,15 @@ const Home = () => {
     <>
       <div className="w-full py-7 px-2 md:px-7 lg:px-20 flex flex-col gap-14 items-center justify-center">
         <Header />
-        <About />
-        <CallToAction />
-        <SkillList />
-        <Projects />
-        <Experience />
-        <Certificates />
-        <Contact />
+        <main>
+          <About />
+          <CallToAction />
+          <SkillList />
+          <Projects />
+          <Experience />
+          <Certificates />
+          <Contact />
+        </main>
       </div>
       <Footer />
     </>

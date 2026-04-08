@@ -28,7 +28,7 @@ const CallToAction = () => {
       <a
         href="/files/Jebreal_Aldrani_Resume.pdf"
         download
-        className="bg-white text-[#0ebb73] font-bold py-2 px-4 rounded-md hover:bg-gray-200 flex items-center gap-2 transition"
+        className="bg-white text-[#074B2F] font-bold py-2 px-4 rounded-md hover:bg-gray-200 flex items-center gap-2 transition"
       >
         Download
         <IoMdDownload />

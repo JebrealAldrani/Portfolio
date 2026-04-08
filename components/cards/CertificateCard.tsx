@@ -1,4 +1,3 @@
-
 import { FaClock, FaEye, FaSchool } from "react-icons/fa6";
 import Link from "next/link";
 
@@ -15,11 +14,8 @@ interface CertificateProps {
 }
 
 const CertificateCard = ({ certificate }: CertificateProps) => {
-  
   return (
-    <div
-      className="flex gap-4 flex-col py-3 px-4 shadow-[2px_4px_8px_rgba(255,255,255,0.05)] border border-gray-800 rounded-lg"
-    >
+    <div className="flex gap-4 flex-col py-3 px-4 shadow-[2px_4px_8px_rgba(255,255,255,0.05)] border border-gray-800 rounded-lg">
       <div className="flex gap-2 justify-between items-center">
         <h3 className="text-lg font-bold text-[#0ebb73]">
           {certificate.course}
@@ -27,6 +23,7 @@ const CertificateCard = ({ certificate }: CertificateProps) => {
         <Link
           target="_blank"
           href={certificate.link}
+          aria-label="View certificate"
           className="text-white p-2 rounded-lg border border-gray-800 hover:bg-[#1f2a23] duration-300"
         >
           <FaEye />
