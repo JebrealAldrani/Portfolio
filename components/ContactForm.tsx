@@ -2,6 +2,8 @@
 
 import { useForm, SubmitHandler } from "react-hook-form";
 import { IoSend } from "react-icons/io5";
+import { toast } from "react-toastify";
+import { useState } from "react";
 
 type Inputs = {
   firstName: string;
@@ -23,7 +25,10 @@ const ContactForm = () => {
     formState: { errors },
   } = useForm<Inputs>();
 
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    setIsLoading(true);
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -33,15 +38,20 @@ const ContactForm = () => {
 
       const result = await res.json();
 
+      console.log(result);
+
       if (result.success) {
-        alert("Email sent successfully!");
+        toast.success("Message sent successfully!");
         reset();
       } else {
-        alert("Failed to send email: " + result.error);
+        toast.error("Failed to send message: ");
+        console.log(result.error);
       }
     } catch (err) {
       console.error(err);
-      alert("Something went wrong.");
+      toast.error("Something went wrong.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -124,11 +134,37 @@ const ContactForm = () => {
 
         <button
           type="submit"
-          className="md:w-fit w-full bg-linear-to-br from-[#0ebb73] via-[#173026] to-[#03492c] text-white py-2 px-4 rounded-md cursor-pointer flex items-center justify-center gap-2 self-end"
+          disabled={isLoading}
+          className="md:w-fit w-full bg-linear-to-br from-[#0ebb73] via-[#173026] to-[#03492c] text-white py-2 px-6 rounded-md flex items-center justify-center gap-2 self-end transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed hover:scale-105 active:scale-95"
         >
-          <p className="text-lg font-medium"> Send Message</p>
-
-          <IoSend />
+          {isLoading ? (
+            <>
+              <svg
+                className="animate-spin"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="white"
+                  strokeWidth="3"
+                  strokeDasharray="31.4"
+                  strokeDashoffset="10"
+                  strokeLinecap="round"
+                />
+              </svg>
+              <p className="text-lg font-medium">Sending...</p>
+            </>
+          ) : (
+            <>
+              <p className="text-lg font-medium">Send Message</p>
+              <IoSend />
+            </>
+          )}
         </button>
       </form>
     </div>

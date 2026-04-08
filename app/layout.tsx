@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { ToastContainer } from "react-toastify";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -28,6 +29,15 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth`}
       >
         {children}
+        <ToastContainer
+          position="top-right"
+          autoClose={4000}
+          hideProgressBar={false}
+          closeOnClick
+          pauseOnHover
+          draggable
+          theme="dark" // عشان يتناسب مع الـ dark theme تبعك
+        />
       </body>
     </html>
   );
