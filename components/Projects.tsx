@@ -44,7 +44,11 @@ const Projects = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="w-full flex flex-col my-20">
+    <div
+      id="projects"
+      ref={sectionRef}
+      className="w-full flex flex-col my-20 scroll-mt-20"
+    >
       <h2 className=" text-5xl bg-linear-to-r from-[#0ebb73] to-green-300 bg-clip-text text-transparent text-center mb-15 font-bold">
         Projects
       </h2>

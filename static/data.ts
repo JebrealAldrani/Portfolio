@@ -26,16 +26,20 @@ export const HEADER_ITEMS = [
     href: "/",
   },
   {
-    title: "About",
-    href: "#/about",
+    title: "Technologies",
+    href: "/#technologies",
+  },
+  {
+    title: "Projects",
+    href: "/#projects",
   },
   {
     title: "Companies",
     href: "/#companies",
   },
   {
-    title: "Technologies",
-    href: "/#technologies",
+    title: "Certificates",
+    href: "/#certificates",
   },
   {
     title: "Contact",

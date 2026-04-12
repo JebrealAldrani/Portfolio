@@ -48,7 +48,11 @@ const Certificates = () => {
     return () => ctx.revert();
   }, []);
   return (
-    <div ref={certificatesRef} className="w-full flex flex-col my-20">
+    <div
+      id="certificates"
+      ref={certificatesRef}
+      className="w-full flex flex-col my-20 scroll-mt-20"
+    >
       <h2 className=" text-5xl bg-linear-to-r from-[#0ebb73] to-green-300 bg-clip-text text-transparent text-center mb-15 font-bold">
         Certificates
       </h2>
