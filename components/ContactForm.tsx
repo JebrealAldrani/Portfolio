@@ -135,7 +135,7 @@ const ContactForm = () => {
         <button
           type="submit"
           disabled={isLoading}
-          className="md:w-fit w-full bg-linear-to-br from-[#0ebb73] via-[#173026] to-[#03492c] text-white py-2 px-6 rounded-md flex items-center justify-center gap-2 self-end transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed hover:scale-105 active:scale-95"
+          className="cursor-pointer md:w-fit w-full bg-linear-to-br from-[#0ebb73] via-[#173026] to-[#03492c] text-white py-2 px-6 rounded-md flex items-center justify-center gap-2 self-end transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed hover:scale-105 active:scale-95"
         >
           {isLoading ? (
             <>
