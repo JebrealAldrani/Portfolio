@@ -39,7 +39,7 @@ const About = () => {
       <div ref={positionRef} className="w-full text-5xl font-bold md:w-2/6">
         <p className="text-white">Jebreal Aldrani</p>
         <span className="bg-linear-to-r from-[#0ebb73] to-green-300 bg-clip-text text-transparent">
-          Frontend Developer
+          Fullstack Developer
         </span>
       </div>
 

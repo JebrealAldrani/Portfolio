@@ -1,4 +1,4 @@
-import { FaLinkedin, FaLocationDot } from "react-icons/fa6";
+import { FaLinkedin, FaLocationDot, FaCcStripe } from "react-icons/fa6";
 import { IoMdCall } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
 import {
@@ -18,6 +18,22 @@ import {
   SiGithub,
   SiZod,
   SiGitlab,
+  SiDrizzle,
+  SiGoogleanalytics,
+  SiGraphql,
+  SiSocketdotio,
+  SiMysql,
+  SiPostgresql,
+  SiMongodb,
+  SiVercel,
+  SiNetlify,
+  SiRailway,
+  SiRender,
+  SiCloudinary,
+  SiRefine,
+  SiCoderabbit,
+  SiNodedotjs,
+  SiExpress,
 } from "react-icons/si";
 
 export const HEADER_ITEMS = [
@@ -48,30 +64,58 @@ export const HEADER_ITEMS = [
 ];
 
 export const SKILLS = [
-  { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
+  // Frontend Core
+  { name: "Next.js", icon: SiNextdotjs, color: "#FFFFFF" },
   { name: "React.js", icon: SiReact, color: "#61DAFB" },
-  { name: "Redux", icon: SiRedux, color: "#764ABC" },
   { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
   { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
-  { name: "Material UI", icon: SiMui, color: "#0081CB" },
   { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4" },
-  { name: "Bootstrap", icon: SiBootstrap, color: "#563D7C" },
-  { name: "GSAP", icon: SiGreensock, color: "#880000" },
+  { name: "Material UI", icon: SiMui, color: "#0081CB" },
+  { name: "Shadcn UI", icon: null, svg: "/logos/shadcn.svg" },
+  { name: "Redux", icon: SiRedux, color: "#764ABC" },
+  { name: "Zustand", icon: null, svg: "/logos/zustand.svg" },
+  { name: "React Hook Form", icon: null, svg: "/logos/react-hook-form.svg" },
+  { name: "Zod", icon: SiZod, color: "#408AFF" },
+  { name: "TanStack React Table", icon: null, svg: "/logos/splash-dark.svg" },
+
+  // UI / Styling
+  { name: "Bootstrap", icon: SiBootstrap, color: "#7952B3" },
+  { name: "GSAP", icon: SiGreensock, color: "#88CE02" },
   { name: "CSS", icon: SiCss, color: "#663399" },
   { name: "HTML", icon: SiHtml5, color: "#E34F26" },
   { name: "jQuery", icon: SiJquery, color: "#0769AD" },
+
+  // Backend
+  { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
+  { name: "Express.js", icon: SiExpress, color: "#FFFFFF" },
+  { name: "REST API", icon: null },
+  { name: "GraphQL", icon: SiGraphql, color: "#E10098" },
+  { name: "Socket.io", icon: SiSocketdotio, color: "#FFFFFF" },
+
+  // Databases & ORM
+  { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
+  { name: "Neon", icon: null, svg: "/logos/neon.svg" },
+  { name: "Drizzle", icon: SiDrizzle, color: "#C5F82A" },
+  { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+  { name: "MySQL", icon: SiMysql, color: "#4479A1" },
+
+  // Cloud / Deployment / Tools
+  { name: "Vercel", icon: SiVercel, color: "#FFFFFF" },
+  { name: "Railway", icon: SiRailway, color: "#FFFFFF" },
+  { name: "Render", icon: SiRender, color: "#46E3B7" },
+  { name: "Netlify", icon: SiNetlify, color: "#00C7B7" },
+  { name: "Cloudinary", icon: SiCloudinary, color: "#3448C5" },
+  { name: "Google Analytics", icon: SiGoogleanalytics, color: "#E37400" },
+
+  // Developer Tools
   { name: "Git", icon: SiGit, color: "#F05032" },
-  { name: "GitHub", icon: SiGithub, color: "#8534F3" },
-  { name: "GitLab", icon: SiGitlab, color: "#fc6d27" },
+  { name: "GitHub", icon: SiGithub, color: "#FFFFFF" },
+  { name: "GitLab", icon: SiGitlab, color: "#FC6D26" },
+  { name: "CodeRabbit", icon: SiCoderabbit, color: "#FF6B6B" },
 
-  { name: "Zod", icon: SiZod, color: "#408AFF" },
-
-  // Still need SVGs from svgl.app for these ⬇️
-  { name: "Zustand", icon: null, svg: "/logos/zustand.svg" },
-  { name: "Shadcn UI", icon: null, svg: "/logos/shadcn.svg" },
+  // Enterprise / Additional
+  { name: "Refine", icon: SiRefine, color: "#2D9CDB" },
   { name: "Syncfusion", icon: null, svg: "/logos/syncfusion.svg" },
-  { name: "React Hook Form", icon: null, svg: "/logos/react-hook-form.svg" },
-  { name: "TanStack React Table", icon: null, svg: "/logos/splash-dark.svg" },
 ];
 
 export const PROJECTS = [
@@ -239,7 +283,7 @@ export const CERTIFICATES = [
     hours: "40.5",
     institute: "Udemy",
     instructor: "Maximilian Schwarzmüller",
-    progress: 44,
+    progress: 81,
     link: "",
   },
 ];
@@ -247,11 +291,13 @@ export const CERTIFICATES = [
 export const CONTACT_INFO = [
   {
     Icon: IoMdCall,
-    info: "+962 78 77 555 85",
+    // info: "+962 78 77 555 85",
+    info: "+962 xx xx xxx xx",
   },
   {
     Icon: MdEmail,
-    info: "jebrealaldrani@gmail.com",
+    // info: "jebrealaldrani@gmail.com",
+    info: "example@gmail.com",
   },
   {
     Icon: FaLocationDot,
