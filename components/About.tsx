@@ -49,15 +49,20 @@ const About = () => {
         className=" w-full md:w-4/6 text-lg text-gray-400 flex flex-col gap-4"
       >
         <p>
-          Frontend Developer experienced in building responsive and scalable web
-          applications using Next.js, React.js, TypeScript, and modern
-          JavaScript technologies. Skilled in developing dynamic user
-          interfaces, integrating APIs, and creating clean, maintainable code.
+          {" "}
+          Full-Stack Developer specializing in Next.js, React.js, TypeScript,
+          Node.js, and Express.js, focused on building scalable applications
+          with clean architecture, powerful functionality, and exceptional user
+          experiences.{" "}
         </p>
+
         <p>
-          worked on projects including dashboards, system management, scheduling
-          platforms, and e-commerce applications, focusing on performance,
-          usability, and modern UI/UX practices.
+          {" "}
+          I combine modern UI libraries, APIs, databases, and third-party
+          services to turn complex requirements into reliable, production-ready
+          products. From intuitive interfaces to robust backend systems, I build
+          software designed to perform, scale, and deliver real business
+          value.{" "}
         </p>
       </div>
     </div>
