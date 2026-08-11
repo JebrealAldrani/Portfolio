@@ -216,14 +216,14 @@ export const PROJECTS = [
 ];
 
 export const EXPERIENCES = [
-  {
-    image: "/images/signals_control.png",
-    position: "Frontend Developer",
-    type: "Freelance",
-    location: "Amman, Jordan",
-    startDate: "Dec 2025",
-    endDate: "Mar 2026",
-  },
+  // {
+  //   image: "/images/signals_control.png",
+  //   position: "Frontend Developer",
+  //   type: "Freelance",
+  //   location: "Amman, Jordan",
+  //   startDate: "Dec 2025",
+  //   endDate: "Mar 2026",
+  // },
   {
     image: "/images/rowmini.jpeg",
     position: "Frontend Developer",
@@ -291,16 +291,19 @@ export const CERTIFICATES = [
 export const CONTACT_INFO = [
   {
     Icon: IoMdCall,
-    // info: "+962 78 77 555 85",
-    info: "+962 xx xx xxx xx",
+    info: "+962 78 77 555 85",
+    type: "phone",
+    // info: "+962 xx xx xxx xx",
   },
   {
     Icon: MdEmail,
-    // info: "jebrealaldrani@gmail.com",
-    info: "example@gmail.com",
+    info: "jebrealaldrani@gmail.com",
+    type: "email",
+    // info: "example@gmail.com",
   },
   {
     Icon: FaLocationDot,
+    type: "location",
     info: "Amman, Jordan",
   },
 ];

@@ -15,6 +15,7 @@ const ContactInfo = () => {
               key={contact.info}
               Icon={contact.Icon}
               info={contact.info}
+              type={contact.type}
             />
           ))}
         </div>
