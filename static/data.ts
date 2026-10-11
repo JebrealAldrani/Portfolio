@@ -279,7 +279,7 @@ export const CERTIFICATES = [
   },
   {
     course: "Node.js The Complete Guide (MVC, REST APIs, GraphQL, Deno)",
-    status: "In Progress",
+    status: "Complete",
     hours: "40.5",
     institute: "Udemy",
     instructor: "Maximilian Schwarzmüller",
