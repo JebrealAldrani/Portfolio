@@ -35,7 +35,8 @@ const Header = () => {
   }, [open]); // re-runs every time open changes
 
   return (
-    <nav className="w-full relative flex items-center justify-start md:justify-center py-2 fixed-top bg-[#151d17] rounded-xl border-1-solid border border-[#2d352f] h-11.75 z-999">
+    <nav className="sticky top-3 mt-3 w-full flex items-center justify-start md:justify-center py-2 bg-[#151d17] rounded-xl border border-[#2d352f] h-11.75 z-999">
+      {" "}
       <ul className="hidden md:flex md:items-center md:gap-5">
         {HEADER_ITEMS.map((item) => (
           <li key={item.title}>
@@ -49,7 +50,6 @@ const Header = () => {
           </li>
         ))}
       </ul>
-
       {/* Mobile Menu */}
       {open && (
         <div
@@ -77,7 +77,6 @@ const Header = () => {
           </ul>
         </div>
       )}
-
       <RxHamburgerMenu
         className="md:hidden text-white ml-4 cursor-pointer w-6 h-6"
         onClick={toggleMenu}
