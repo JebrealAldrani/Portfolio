@@ -283,8 +283,8 @@ export const CERTIFICATES = [
     hours: "40.5",
     institute: "Udemy",
     instructor: "Maximilian Schwarzmüller",
-    progress: 81,
-    link: "",
+    progress: 100,
+    link: "https://www.udemy.com/certificate/UC-2e7c26f3-9de7-47f6-afed-18893a610eb8/",
   },
 ];
 

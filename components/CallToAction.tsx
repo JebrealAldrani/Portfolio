@@ -26,7 +26,7 @@ const CallToAction = () => {
       className="px-8 py-4 rounded-md bg-[#0ebb7360] flex items-center gap-4 w-full my-12"
     >
       <a
-        href="/files/Jebreal_Aldrani_Resume.pdf"
+        href="/files/Jebreal Aldrani Fullstack CV.pdf"
         download
         className="bg-white text-[#074B2F] font-bold py-2 px-4 rounded-md hover:bg-gray-200 flex items-center gap-2 transition"
       >
